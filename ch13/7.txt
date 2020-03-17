@@ -1,7 +1,0 @@
-aaa 111
-bbb 222
-ccc 4444
-ddd 1234
-eee 1986
-fff 1867
-ggg 3829

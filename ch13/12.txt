@@ -1,7 +1,0 @@
-aaa and bbb 111
-bbb and aaa 222
-ccc 4444
-ddd 1234
-eee or ddd 1986
-fff 1867
-ggg 3829

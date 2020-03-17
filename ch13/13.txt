@@ -1,5 +1,0 @@
-(asdf,1,1)
-(zxcv,2,2)
-(qwer,3,3)
-(zcxva,4,4)
-(qwas,5,5)
