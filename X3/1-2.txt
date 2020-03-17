@@ -1,0 +1,2 @@
+1. {}-list form for initialization, constexpr, auto type, range-for-statement, nullptr, enum class
+2. The compiler translates one .cpp file into .o file including the machine language. The linker collects all .o files and build one program.
