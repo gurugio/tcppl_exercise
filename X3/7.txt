@@ -1,0 +1,2 @@
+Some statement of what is assumed to be true for a class.
+It needs to define the limitation what the class can handle and can to.
