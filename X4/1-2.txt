@@ -1,0 +1,2 @@
+1. Concrete type, arithmetic type, container type, abstract type, rvalue reference, moving, function template, function object
+2. ?
