@@ -1,0 +1,4 @@
+1. map is implemented with the search tree and unordered_map is hash table.
+2. unordered_map, map, list, vector, set
+3. find, find_if, count, count_if, replace, copy, unique_copy, sort, merge
+4. <vector> <list> <map> <set> <deque>
