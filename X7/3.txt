@@ -1,0 +1,15 @@
+
+
+// undefined:
+// 1. return value of new of size zero
+// 2. shared variable by two threads without synchronization
+// 3. dereferencing a pointer out of boundary
+// 4. dereferencing null pointer
+// 5. dereferencing a uninitialized pointer
+
+// implementation-defined:
+// 1. the number of bits in char
+// 2. the number of bits in pointer
+// 3. identifier characters
+// 4. source file inclusion
+// 5. The mapping of physical source file multi-byte characters to the execution character set
