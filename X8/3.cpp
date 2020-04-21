@@ -48,6 +48,20 @@ int main(void)
   cout << pptoint << endl;
   cout << pptoint + 1 << endl; // ptoint + 0x38(=8X7)
   
-  int *pmatrix[8][7];
-
+  int *pmatrix[8][7] =
+    {
+     {&int7[0],&int7[1],&int7[2],&int7[3],&int7[4],&int7[5],&int7[6]},
+     {&int7[0],&int7[1],&int7[2],&int7[3],&int7[4],&int7[5],&int7[6]},
+     {&int7[0],&int7[1],&int7[2],&int7[3],&int7[4],&int7[5],&int7[6]},
+     {&int7[0],&int7[1],&int7[2],&int7[3],&int7[4],&int7[5],&int7[6]},
+     {&int7[0],&int7[1],&int7[2],&int7[3],&int7[4],&int7[5],&int7[6]},
+     {&int7[0],&int7[1],&int7[2],&int7[3],&int7[4],&int7[5],&int7[6]},
+     {&int7[0],&int7[1],&int7[2],&int7[3],&int7[4],&int7[5],&int7[6]},
+     {&int7[0],&int7[1],&int7[2],&int7[3],&int7[4],&int7[5],&int7[6]}
+    };
+  //
+  // do not know how to make "array of 8 arrays of 7 pointers to int".
+  //
+  // using ptointmatrix = int (*)[8][7];
+  // ptointmatrix pmatrix_ex = pmatrix;
 }
