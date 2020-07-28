@@ -36,7 +36,13 @@ public:
 		if (depth > depth_max)
 			throw runtime_error{"Ping: over-depth"};
 		ping(depth);
-		call_pong(depth + 1);
+
+		try {
+			call_pong(depth + 1);
+		} catch (exception& e) {
+			cout << "Exception from pong at depth:" << (depth + 1) << endl;
+			throw;
+		}
 	}
 
 	void call_pong(int depth)
@@ -44,13 +50,22 @@ public:
 		if (depth > depth_max)
 			throw runtime_error{"Pong: over-depth"};
 		pong(depth);
-		call_ping(depth + 1);
+		try {
+			call_ping(depth + 1);
+		} catch (exception& e) {
+			cout << "Exception from ping at depth:" << (depth + 1) << endl;
+			throw;
+		}
 	}
 	
 	void play(void)
 	{
-		if (ping == nullptr) default_ping(0);
-		else call_ping(0);
+		try {
+			if (ping == nullptr) default_ping(0);
+			else call_ping(0);
+		} catch (exception& e) {
+			cout << "Exception: " << e.what() << endl;
+		}
 	}
 };
 
@@ -67,17 +82,8 @@ void mypong(int d)
 int main(void)
 {
 	pingpong tabletennis(10);
-
-	try {
-		tabletennis.play();
-	} catch (exception& e) {
-		cerr << e.what() << endl;
-	}
+	tabletennis.play();
 
 	pingpong tennis2(10, myping, mypong);
-	try {
-		tennis2.play();
-	} catch (exception& e) {
-		cerr << e.what() << endl;
-	}
+	tennis2.play();
 }
