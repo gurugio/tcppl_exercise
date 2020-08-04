@@ -164,5 +164,17 @@ void Date::print(void) const
 int main(void)
 {
 	Date ddd {31, Month::dec, 2019};
+
+	for (int i = 0; i < 200; i++) {
+		ddd.add_day(1);
+		ddd.print();
+	}
+
+	for (int i = 0; i < 100; i++) {
+		ddd.add_month(1);
+		ddd.print();
+	}
+
+	ddd.add_day(40);
 	ddd.print();
 }
