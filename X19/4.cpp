@@ -6,34 +6,37 @@ class RINT {
 public:
 	RINT(): n{0} {}
 	RINT(int x): n{x} {}
-	//RINT(RINT& x): n{x.n} {}
 
-	// RINT& operator=(const RINT& x) {
-	// 	n = x.n;
-	// 	return *this;
-	// }
-	RINT& operator=(int& x) {
+	// copy
+	// actually not necessary because default is enough
+	RINT(const RINT& x): n{x.n} {}
+	RINT& operator=(const RINT& x) {
+		n = x.n;
+		return *this;
+	}
+
+	RINT& operator=(int x) {
 		n = x;
 		return *this;
 	}
 	
-	RINT operator+=(RINT x) {
+	RINT& operator+=(RINT x) {
 		n += x.n;
 		return *this;
 	}
-	RINT operator-=(RINT x) {
+	RINT& operator-=(RINT x) {
 		n -= x.n;
 		return *this;
 	}
-	RINT operator*=(RINT x) {
+	RINT& operator*=(RINT x) {
 		n *= x.n;
 		return *this;
 	}
-	RINT operator/=(RINT x) {
+	RINT& operator/=(RINT x) {
 		n /= x.n;
 		return *this;
 	}
-	RINT operator%=(RINT x) {
+	RINT& operator%=(RINT x) {
 		n %= x.n;
 		return *this;
 	}
@@ -94,4 +97,9 @@ int main(void)
 
 	RINT n3 = 5 % n2;
 	cout << n3 << endl;
+
+	RINT n4 = n2;
+	cout << "n4:"<< n4 << endl;
+	cout << n4 + n2 << endl;
+	cout << "n4:"<< n4 << endl;
 }
