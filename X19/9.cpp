@@ -156,4 +156,9 @@ int main(void)
 	cout << v1 * 3 << endl;
 	v1[2] = 99;
 	cout << v1 << endl;
+
+	Vec4 v2 = arr;
+	cout << "v2:" << v2 << endl;
+	cout << v1 + v2 << endl;
+	cout << v1 << endl;
 }
